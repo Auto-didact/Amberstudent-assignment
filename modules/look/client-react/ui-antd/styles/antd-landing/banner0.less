@@ -2,7 +2,7 @@
 .@{banner0} {
   // 如果在第一屏且导航位置为 relative, 一屏为 height: calc(~"100vh - 64px");
   width: 100%;
-  height: 100vh;
+  height: 60vh;
   position: relative;
   text-align: center;
   border-color: #666;
@@ -19,8 +19,10 @@
     right: 0;
     font-size: 14px;
     color: @template-text-color-light;
-    width: 550px;
-    >.queue-anim-leaving {
+    max-width: 700px;
+
+    width: 100%;
+    > .queue-anim-leaving {
       position: relative !important;
     }
   }
@@ -45,7 +47,7 @@
     line-height: 40px;
     font-size: 16px;
     height: 40px;
-    transition: background .45s @ease-out, box-shadow .45s @ease-out;
+    transition: background 0.45s @ease-out, box-shadow 0.45s @ease-out;
     &:hover {
       color: #fff;
       border-color: #fff;
@@ -72,6 +74,7 @@
 
 @media screen and (max-width: 767px) {
   .@{banner0} {
+    height:50vh;
     background-attachment: inherit;
     & &-text-wrapper {
       width: 90%;
@@ -81,4 +84,34 @@
       left: 0;
     }
   }
+}
+
+.banner-select {
+  max-width: 800px;
+  width: 100%;
+  .ant-btn {
+    border-radius: 0 !important;
+    height: 60px;
+    font-size: 30px;
+  }
+  input{
+    height: 60px;
+    border-radius: 0;
+  }
+  // .ant-select {
+  //   .ant-select-selection {
+  //     height: 60px;
+  //     border-radius: 0 !important;
+  //     .ant-select-selection__rendered {
+  //       width: 100%;
+  //       height: 100%;
+  //       .ant-select-selection__placeholder{
+  //         font-size: 20px;
+  //         height: 35px;
+  //         line-height: 30px;
+  //         margin-top: -15px;
+  //       }
+  //     }
+  //   }
+  // }
 }

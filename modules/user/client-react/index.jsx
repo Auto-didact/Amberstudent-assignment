@@ -114,35 +114,35 @@ export default new ClientModule({
       component={loadable(() => import('./containers/ResetPassword').then(c => c.default))}
     />
   ],
-  navItemAdmin: [
-    <IfLoggedIn key="/users" role="admin">
-      <MenuItem>
-        <NavLinkUsersWithI18n />
-      </MenuItem>
-    </IfLoggedIn>
-  ],
+  // navItemAdmin: [
+  //   <IfLoggedIn key="/users" role="admin">
+  //     <MenuItem>
+  //       <NavLinkUsersWithI18n />
+  //     </MenuItem>
+  //   </IfLoggedIn>
+  // ],
 
-  navItemUser: [
-    <IfLoggedIn key="/profile">
-      <MenuItem>
-        <NavLink to="/profile" className="nav-link" activeClassName="active">
-          <ProfileName />
-        </NavLink>
-      </MenuItem>
-    </IfLoggedIn>,
-    <IfLoggedIn key="/logout">
-      <MenuItem>
-        <LogoutLink />
-      </MenuItem>
-    </IfLoggedIn>
-  ],
-  navItemRight: [
-    <IfNotLoggedIn key="/login">
-      <MenuItem>
-        <NavLinkLoginWithI18n />
-      </MenuItem>
-    </IfNotLoggedIn>
-  ],
+  // navItemUser: [
+  //   <IfLoggedIn key="/profile">
+  //     <MenuItem>
+  //       <NavLink to="/profile" className="nav-link" activeClassName="active">
+  //         <ProfileName />
+  //       </NavLink>
+  //     </MenuItem>
+  //   </IfLoggedIn>,
+  //   <IfLoggedIn key="/logout">
+  //     <MenuItem>
+  //       <LogoutLink />
+  //     </MenuItem>
+  //   </IfLoggedIn>
+  // ],
+  // navItemRight: [
+  //   <IfNotLoggedIn key="/login">
+  //     <MenuItem>
+  //       <NavLinkLoginWithI18n />
+  //     </MenuItem>
+  //   </IfNotLoggedIn>
+  // ],
   resolver: [resolvers],
   localization: [{ ns: 'user', resources }],
   dataRootComponent: [DataRootComponent],
