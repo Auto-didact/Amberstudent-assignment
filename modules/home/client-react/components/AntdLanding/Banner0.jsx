@@ -308,8 +308,8 @@ class Banner extends React.PureComponent {
         <Divider />
         <div style={{ position: "relative" }}>
           <br />
-          <div style={{ maxWidth: "1200px", margin: "auto" }}>
-            <Title>Suggested Location</Title>
+          <div style={{ maxWidth: "1200px", margin: "auto", padding: "24px" }}>
+            <Title level={2}>Suggested Location</Title>
 
             <Row gutter={24}>
               {suggestLoading ||
@@ -330,7 +330,7 @@ class Banner extends React.PureComponent {
                       <Col key={keu} xs={24} md={8} lg={6}>
                         <Card
                           style={{ marginBottom: "10px" }}
-                          title={rest.name}
+                          title={<Title level={3}>{rest.name}</Title>}
                         >
                           {rest.secondary_name != ""
                             ? rest.secondary_name
