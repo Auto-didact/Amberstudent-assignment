@@ -93,7 +93,7 @@ class Banner extends React.PureComponent {
           });
         },
         // Note: it's important to handle errors here
-        // instead of a catch() block so that we don't swallow
+        // instead of a catch() block   so that we don't swallow
         // exceptions from actual bugs in components.
         (error) => {
           this.setState({
@@ -126,6 +126,7 @@ class Banner extends React.PureComponent {
         }
       );
   };
+
   render() {
     const { ...currentProps } = this.props;
     const {
@@ -141,7 +142,6 @@ class Banner extends React.PureComponent {
 
     // const dataP =  this.getData();
     console.log("dataP", searchParam, data, loading);
-
     return (
       <div>
         <div {...currentProps} {...dataSource.wrapper}>
